@@ -31,7 +31,7 @@ const SignUp = () => {
         
             // Axios 사용하여 서버에 POST 요청 보내기
             axios
-            .post('http://your-django-server-url/api/signup/', userData)
+            .get('http://192.168.135.207:8000', userData)
             .then((response) => {
                 // 서버에서 받은 응답 처리
                 setText(JSON.stringify(response.data)); // 서버 테스트 성공으로 바뀌면 success

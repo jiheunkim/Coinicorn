@@ -23,6 +23,15 @@
   color: black;
 }
 
+.news {
+  background-image: url('https://kr.object.ncloudstorage.com/moong-images/005930.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
 .services {
   background-image: url('https://kr.object.ncloudstorage.com/moong-images/005930.png');
   background-position: center;

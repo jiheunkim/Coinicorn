@@ -35,7 +35,7 @@ function Navbar() {
             <div className = 'navbar-container'>
                 {/* 모바일버전에서 클릭하면 메뉴 보이도록 설정하는 것도 한다. (close Mobile Menu)는 다시 버튼 누르면 없어지고 생기고 하도록 한다.  */}
                 <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-                    LikeLion 
+                    Coinicorn 
                     <i className='fab fa-typo3' />
                 </Link>
                 <div className='menu-icon' onClick={handleClick}>
@@ -48,13 +48,13 @@ function Navbar() {
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/services' className='nav-links' onClick = {closeMobileMenu}>
-                            Services
+                        <Link to='/news' className='nav-links' onClick = {closeMobileMenu}>
+                            News
                         </Link>
                     </li>
                     <li className='nav-item'>
-                        <Link to='/products' className='nav-links' onClick = {closeMobileMenu}>
-                            Products
+                        <Link to='/services' className='nav-links' onClick = {closeMobileMenu}>
+                            Services
                         </Link>
                     </li>
                     <li className='nav-item'>

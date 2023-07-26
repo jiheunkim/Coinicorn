@@ -2,12 +2,12 @@ import '../../App.css';
 import React, { useState } from "react";
 import axios from "axios";
 
-function Services() {
+function News() {
   const [text, setText] = useState("없음");
   
   const clicked = () => {
     axios
-      .get("http://192.168.135.207:8000/", {
+      .post("http://192.168.135.207:8000/", {
         params: {
           abc: "가나다",
         },
@@ -23,4 +23,4 @@ function Services() {
   );
 }
 
-export default Services;
+export default News;
