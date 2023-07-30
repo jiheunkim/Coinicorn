@@ -26,7 +26,7 @@ const SignUp = () => {
 
     // Axios 사용하여 서버에 POST 요청 보내기
     axios
-      .post('http://192.168.135.207:8000/login', userData) // POST 요청으로 변경
+      .post('http://192.168.135.207:8000/', userData) // POST 요청으로 변경
       .then((response) => {
         // 서버에서 받은 응답 처리
         setText(JSON.stringify(response.data)); // 서버 테스트 성공으로 바뀌면 success
