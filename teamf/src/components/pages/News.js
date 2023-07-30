@@ -26,7 +26,11 @@ function News() {
 //   );
   return (
     <>
-      <Board />
+      <Lists />
+      {/* <Board /> */}
+      <br></br>
+      <br></br>
+      <br></br>
       <Footer />
     </>
   );
