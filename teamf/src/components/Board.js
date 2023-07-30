@@ -15,7 +15,7 @@ const Board = () => {
 
 //더미 데이터 호출
   useEffect(() => {
-    axios.get('file:///C:/Users/PC/Downloads/MOCK_DATA.json')
+    axios.get('https://jsonplaceholder.typicode.com/users')
       .then(res => setInfo(res.data))
       .catch(err => console.log(err));
   }, []);
