@@ -73,6 +73,10 @@
     overflow: hidden;
     flex: 2;
   }
+
+  .lists__item__pic-wrap.right-align {
+    text-align: right;
+  }
   
   .lists__item__img {
     position: absolute;

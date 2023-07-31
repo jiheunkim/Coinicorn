@@ -52,7 +52,11 @@ const Lists = () => {
   
     return (
       <div className="container max-w-screen-lg mx-auto">
-        <div className='text-xl font-bold mt-5 mb-3 text-center'>🔥HOT</div>
+        <br></br>
+        <div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '30px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+          🔥HOT NEWS🔥
+        </div>
+        <br></br>
         <table className="min-w-full table-auto text-gray-800">
           <thead className='justify-between'>
             <tr className='bg-gray-800'>
