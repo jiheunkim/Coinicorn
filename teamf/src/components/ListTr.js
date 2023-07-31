@@ -7,7 +7,7 @@ const ListTr = ({info}) => {
             {
                 info.map(item => {
                     return (
-                        <ListTd key={item.id} item={item} />
+                        <ListTd key={item.news_id} item={item} />
                     )
                 })
             }

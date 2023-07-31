@@ -5,16 +5,14 @@ import ListTr from './ListTr';
 
 const Lists = () => {
     const [info, setInfo] = useState([]);
-    const [selected, setSelected] = useState('');
-    const [modalOn, setModalOn] = useState(false);
   
     // 고유 값으로 사용 될 id
     // ref 를 사용하여 변수 담기
     const nextId = useRef(11);
 
-  //더미 데이터 호출
+  //데이터 호출
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.post('https://fd92-39-125-118-130.ngrok-free.app/blockchain/apitest?format=json')
       .then(response => {
         setInfo(response.data);
       })
@@ -22,33 +20,6 @@ const Lists = () => {
         console.error('Error fetching data:', error);
       });
   }, []);
-  
-    const handleSave = (data) => {
-      //데이터 수정하기
-      if (data.id) { //수정 데이터에는 id가 존재
-        setInfo(
-          info.map(row => data.id === row.id ? {
-            id: data.id,
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            website: data.website,
-          } : row))
-  
-      } else { //바로 추가하기
-        // 데이터 추가하기
-        setInfo(info => info.concat(
-          {
-            id: nextId.current,
-            name: data.name,
-            email: data.email,
-            phone: data.phone,
-            website: data.website
-          }
-        ))
-        nextId.current += 1;
-      }
-    }
   
     return (
       <div className="container max-w-screen-lg mx-auto">
