@@ -4,28 +4,35 @@ import { useParams } from 'react-router-dom';
 
 const Detail = () => {
   const [info, setInfo] = useState({});
-  const { id } = useParams(); // URL 매개변수로부터 id 값을 가져옴
+  const params = useParams();
+  const { id } = params; // URL 매개변수로부터 news_id 값을 가져옴
+  const [news, setNews] = useState({});
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/users/${id}`) // 해당 id를 이용하여 데이터를 가져옴
-      .then(response => {
-        setInfo(response.data);
-      })
-      .catch(error => {
-        console.error('Error fetching data:', error);
-      });
+    fetch(`https://jsonplaceholder.typicode.com/users/${id}`)
+        .then((response) => response.json())
+        .then((result) => setNews(result));
   }, [id]); // id가 변경될 때마다 useEffect가 호출되도록 함
 
+  const { name, email } = news;
+
   return (
-    <section>
-      <article>
-        <p>
-          <strong>{info.id}</strong> {/* 가져온 데이터의 id 값을 사용 */}
-        </p>
-        <p>{info.email}</p> {/* 가져온 데이터의 email 값을 사용 */}
-        <img alt="avatar" src={info.website} /> {/* 가져온 데이터의 website 값을 사용 */}
-      </article>
-    </section>
+    <div className="container max-w-screen-lg mx-auto">
+      <br></br>
+      <div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '30px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+        🔥🔥
+      </div>
+      <br></br>
+      <table className="min-w-full table-auto text-gray-800">
+        <thead className='justify-between'>
+          <tr className='bg-gray-800'>
+            <th className="text-gray-300 px-4 py-3">{id}</th>
+            <th className="text-gray-300 px-4 py-3">{name}</th>
+            <th className="text-gray-300 px-4 py-3">{email}</th>
+          </tr>
+        </thead>
+      </table>
+    </div>
   );
 };
 
