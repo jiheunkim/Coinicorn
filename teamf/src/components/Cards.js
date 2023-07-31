@@ -5,7 +5,9 @@ import CardItem from './CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>2023 국내 TOP 가상화폐 거래소 바로가기</h1>
+      <h1 style={{ fontSize: '36px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+      2023 국내 TOP 가상화폐 거래소 바로가기
+      </h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
