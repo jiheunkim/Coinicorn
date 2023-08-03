@@ -39,6 +39,17 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+  object-fit: contain;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  justify-content: center; /* 필요에 따라 레이아웃 조정 */
 }
 
 .products {
