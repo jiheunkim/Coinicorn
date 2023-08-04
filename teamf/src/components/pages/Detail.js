@@ -11,7 +11,7 @@ const Detail = () => {
   const [news, setNews] = useState({});
 
   useEffect(() => {
-    axios.get(`https://jsonplaceholder.typicode.com/users/${id}`)
+    axios.post(`http://192.168.133.220:8000/blockchain/${id}/?format=json`)
     .then(response => {
       setNews(response.data);
     })
@@ -57,9 +57,9 @@ const Detail = () => {
             <div className="lg:max-w-lg">
               <p className="text-base font-semibold leading-7 text-indigo-600">2023.08.01 14:59:00 (날짜)</p>
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                {id}{email}</h1>
+                {news_id}{news_title}</h1>
               <p className="mt-6 text-xl leading-8 text-gray-700">
-              {name}
+              {summary}
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ const Detail = () => {
           <div className="lg:pr-4">
             <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
               <p>
-                {name}
+                {content}
               </p>
               <ul role="list" className="mt-8 space-y-8 text-gray-600">
                 <li className="flex gap-x-3">
