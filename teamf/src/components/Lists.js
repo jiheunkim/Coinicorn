@@ -12,7 +12,7 @@ const Lists = () => {
 
   //데이터 호출
   useEffect(() => {
-    axios.post('https://fd92-39-125-118-130.ngrok-free.app/blockchain/apitest?format=json')
+    axios.post('http://192.168.133.220:8000/blockchain/apitest?format=json')
       .then(response => {
         setInfo(response.data);
       })
