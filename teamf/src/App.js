@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/pages/Home';
 import News from './components/pages/News';
+import Ranks from './components/pages/Ranks';
 import Services from './components/pages/Services';
 import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
@@ -15,7 +16,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/ranks" element={<Ranks />} />
         <Route path="/news" element={<News />} />
         <Route path="/services" element={<Services />} />
         <Route path='/sign-up' element={<SignUp />} />
