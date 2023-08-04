@@ -24,16 +24,19 @@
   }
   
   .footer-subscription-heading {
+    color: #fff;
     margin-bottom: 24px;
     font-size: 24px;
   }
   
   .footer-subscription-text {
+    color: #fff;
     margin-bottom: 24px;
     font-size: 20px;
   }
   
   .footer-input {
+    color: #000;
     padding: 8px 20px;
     border-radius: 2px;
     margin-right: 10px;
