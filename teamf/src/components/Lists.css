@@ -212,6 +212,93 @@ button {
     transform: scale(1.5);
 } */
 
+.exchange-box {
+  position: fixed;
+  top: 130px;
+  right: 150px;
+  padding: 20px;
+  padding-right: 100px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.exchange-box p {
+  font-weight: 600;
+  color: #6C6C6C;
+  margin-bottom: 15px;
+}
+
+.exchange-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.exchange-box li {
+  margin-bottom: 5px;
+}
+
+.exchange-box a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.exchange-box a:before {
+  content: attr(data-number) ' ';
+  font-weight: 600;
+  color: #000AFF;
+}
+
+.exchange-box a:hover {
+  color: #007bff;
+}
+
+.exchange-box2 {
+  position: fixed;
+  top: 370px;
+  right: 150px;
+  padding: 20px;
+  padding-right: 30px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.exchange-box2 p {
+  font-weight: 600;
+  color: #6C6C6C;
+  margin-bottom: 15px;
+}
+
+.exchange-box2 ul {
+  list-style: none;
+  padding: 0;
+}
+
+.exchange-box2 li {
+  margin-bottom: 5px;
+}
+
+.exchange-box2 a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 300;
+  transition: color 0.3s;
+}
+
+.exchange-box2 a:before {
+  content: attr(data-number) ' ';
+  font-weight: 600;
+  color: #000AFF;
+}
 
 .lists {
     padding: 4rem;
