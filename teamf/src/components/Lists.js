@@ -25,6 +25,9 @@ import { Link } from 'react-router-dom';
 /**
 * @returns {JSX.Element}
 */
+
+const MAX_SUMMARY_LENGTH = 150; // 원하는 최대 요약 길이 설정
+
 const Lists = () => {
     const [info, setInfo] = useState([]);
   
@@ -66,6 +69,10 @@ const Lists = () => {
 
   const top10Numbers = Array.from({ length: 10 }, (_, i) => i + 1);
   const isFirstItemLoaded = info.length > 0;
+
+  const summary = info[0].summary.length > MAX_SUMMARY_LENGTH
+        ? info[0].summary.slice(0, MAX_SUMMARY_LENGTH) + " ..." // 최대 길이 이후에는 "..." 추가
+        : info[0].summary;
   
   return (
     <div className="container max-w-screen-lg mx-auto">
@@ -128,6 +135,8 @@ const Lists = () => {
               <br />
               <span style={{ fontWeight: 300, fontSize: '14px' }}>
                 00일보 | {info[0].view} | {info[0].create_date}
+                <br></br>
+                {summary}
               </span>
             </td>
           </Link>
@@ -136,8 +145,8 @@ const Lists = () => {
               alt='News Image'
               src={info[0].thumb_url}
               style={{
-                width: '2400px',
-                maxHeight: '2300px',
+                width: '3600px',
+                maxHeight: '3500px',
                 objectFit: 'cover',
               }}
             />
