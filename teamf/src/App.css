@@ -24,7 +24,6 @@
 }
 
 .news {
-  background-image: url('https://kr.object.ncloudstorage.com/moong-images/005930.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -43,16 +42,7 @@
   justify-content: center;
   align-items: center;
   padding: 20px;
-  justify-content: center; /* 필요에 따라 레이아웃 조정 */
-}
-
-.products {
-  background-image: url('https://kr.object.ncloudstorage.com/moong-images/005930.png');
-  background-position: center;
-  background-size: fill;
-  background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+  justify-content: center;
 }
 
 .sign-up {
