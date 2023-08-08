@@ -115,7 +115,7 @@ const Lists = () => {
         <table className="min-w-full table-auto text-gray-800">
         <thead className='justify-between'>
             <tr className='bg-white px-4 py-3'>
-            {/* 동적으로 토큰 버튼 생성 */}
+            {/* 동적으로 토큰 버튼 생성
             {coins.map((coin, index) => (
                 <th key={index}>
                     <button
@@ -139,7 +139,7 @@ const Lists = () => {
                         )}
                     </button>
                 </th>
-            ))}
+            ))} */}
             </tr>
         </thead>
         <ListTr info={info} />
