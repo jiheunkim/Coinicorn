@@ -1,10 +1,12 @@
 .navbar {
-    background: linear-gradient(90deg, rgb(47, 76, 206)0%, rgb(11, 0, 129) 100%);
+    background: #fff;
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    border-bottom: 1px solid #ECE4E4;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -19,19 +21,15 @@
   }
   
   .navbar-logo {
-    color: #fff;
+    color: #000AFF;
     justify-self: start;
     margin-left: 20px;
     cursor: pointer;
     text-decoration: none;
+    font-family: 'Red Hat Display', sans-serif;;
     font-size: 2rem;
     display: flex;
     align-items: center;
-  }
-  
-  .fa-typo3 {
-    margin-left: 0.5rem;
-    font-size: 1.8rem;
   }
   
   .nav-menu {
@@ -41,8 +39,8 @@
     list-style: none;
     text-align: center;
     width: 60vw;
-    justify-content: end;
-    margin-right: 2rem;
+    justify-content: start;
+    margin-left: 5rem;
   }
   
   .nav-item {
@@ -50,21 +48,26 @@
   }
   
   .nav-links {
-    color: #fff;
+    color: #000;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
+    font-family: 'Noto Sans KR', sans-serif;
     height: 100%;
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #fff;
+    border-bottom: 4px solid #000AFF;
     transition: all 0.2s ease-out;
+  }
+
+  .nav-links.active {
+    border-bottom: 4px solid #000AFF;
   }
   
   .fa-bars {
-    color: #fff;
+    color: #000;
   }
   
   .nav-links-mobile {
@@ -131,7 +134,7 @@
     }
   
     .fa-times {
-      color: #fff;
+      color: #000;
       font-size: 2rem;
     }
   
@@ -143,6 +146,7 @@
       width: 80%;
       text-decoration: none;
       font-size: 1.5rem;
+      font-family: 'Noto Sans KR', sans-serif;
       background-color: transparent;
       color: #fff;
       padding: 14px 20px;
