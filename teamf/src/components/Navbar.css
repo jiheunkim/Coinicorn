@@ -115,6 +115,10 @@
       color: #242424;
       border-radius: 0;
     }
+
+    .nav-links.active {
+      border-bottom: none;
+    }
   
     .navbar-logo {
       position: absolute;
