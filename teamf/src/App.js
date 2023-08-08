@@ -6,7 +6,6 @@ import Home from './components/pages/Home';
 import News from './components/pages/News';
 import Ranks from './components/pages/Ranks';
 import Services from './components/pages/Services';
-import Products from './components/pages/Products';
 import SignUp from './components/pages/SignUp';
 import Detail from './components/pages/Detail';
 
