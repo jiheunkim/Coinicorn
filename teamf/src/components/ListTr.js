@@ -5,9 +5,9 @@ const ListTr = ({info}) => {
     return (
         <tbody>
             {
-                info.map(item => {
+                info.map((item, index) => {
                     return (
-                        <ListTd key={item.news_id} item={item} />
+                        <ListTd key={item.news_id} item={item} isFirst={index === 0} />
                     )
                 })
             }

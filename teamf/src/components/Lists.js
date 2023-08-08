@@ -2,6 +2,7 @@ import './Lists.css';
 import React, { useEffect, useState, useRef } from "react";
 import axios from 'axios';
 import ListTr from './ListTr';
+import { Link } from 'react-router-dom';
 
 /**
  * @typedef {{
@@ -115,6 +116,35 @@ const Lists = () => {
         <table className="min-w-full table-auto text-gray-800">
         <thead className='justify-between'>
             <tr className='bg-white px-4 py-3'>
+            </tr>
+        </thead>
+        <tr className='bg-white'>
+            <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{info[0].news_id}</td>
+            <Link key={info[0].news_id} to={`/news/detail/${info[0].news_id}`}>
+                <td className='px-4 py-3'>
+                    <span style={{ fontWeight: 600, fontSize: '24px' }}>{info[0].news_title}</span>
+                    <br />
+                    <span style={{ fontWeight: 300, fontSize: '14px' }}>
+                        00일보 | {info[0].view} | {info[0].create_date}
+                    </span>
+                </td>
+            </Link>
+            <td className={`px-4 py-3 ${info[0].isRightAligned ? 'right-align' : ''}`}>
+                <img
+                    alt='News Image'
+                    src={info[0].thumb_url}
+                    style={{
+                      width: '2400px',
+                      maxHeight: '2300px',
+                      objectFit: 'cover',
+                  }}
+                />
+            </td>
+        </tr>
+        </table>
+        <table className="min-w-full table-auto text-gray-800">
+        <thead className='justify-between'>
+            <tr className='bg-white px-4 py-3'>
             {/* 동적으로 토큰 버튼 생성
             {coins.map((coin, index) => (
                 <th key={index}>
@@ -142,7 +172,7 @@ const Lists = () => {
             ))} */}
             </tr>
         </thead>
-        <ListTr info={info} />
+        <ListTr info={info}/>
         </table>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
