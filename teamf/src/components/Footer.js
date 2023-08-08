@@ -47,7 +47,6 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               Coinicorn
-              <i class='fab fa-typo3' />
             </Link>
           </div>
           <small class='website-rights'>Coinicorn © 2023</small>
