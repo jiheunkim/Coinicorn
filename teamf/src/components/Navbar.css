@@ -5,7 +5,6 @@
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    font-family: 'Noto Sans KR', sans-serif;
     border-bottom: 1px solid #ECE4E4;
     position: sticky;
     top: 0;
@@ -48,12 +47,11 @@
   }
   
   .nav-links {
-    color: #000;
+    color: #6C6C6C;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0.5rem 1rem;
-    font-family: 'Noto Sans KR', sans-serif;
     height: 100%;
   }
   
@@ -150,7 +148,6 @@
       width: 80%;
       text-decoration: none;
       font-size: 1.5rem;
-      font-family: 'Noto Sans KR', sans-serif;
       background-color: transparent;
       color: #fff;
       padding: 14px 20px;
