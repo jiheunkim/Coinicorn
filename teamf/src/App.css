@@ -57,3 +57,8 @@
   align-self: center;
   font-size: 2rem;
 }
+
+.footer {
+  position: relative;
+  background-position: bottom;
+}
