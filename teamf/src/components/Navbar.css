@@ -56,12 +56,12 @@
   }
   
   .nav-links:hover {
-    border-bottom: 4px solid #000AFF;
+    border-bottom: 3px solid #000AFF;
     transition: all 0.2s ease-out;
   }
 
   .nav-links.active {
-    border-bottom: 4px solid #000AFF;
+    border-bottom: 3px solid #000AFF;
   }
   
   .fa-bars {
