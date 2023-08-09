@@ -115,14 +115,14 @@ const Lists = () => {
                 ))}
             </ul>
         </div>
-        <div className="exchange-box3">
+        {/* <div className="exchange-box3">
             <p>
               <img
                   alt='Ads Image'
                   src="https://blog.kakaocdn.net/dn/vQUdu/btqvTUJOpaD/F6l3qRXedNPB3mGNmmuOY1/img.png"
               />
             </p>
-        </div>
+        </div> */}
         <br></br>
         <table className="min-w-full table-auto text-gray-800">
         <thead className='justify-between'>

@@ -215,7 +215,7 @@ button {
 .exchange-box {
   position: fixed;
   top: 110px;
-  right: 150px;
+  right: 50px;
   padding: 20px;
   padding-right: 100px;
   background-color: #fff;
@@ -261,9 +261,9 @@ button {
 .exchange-box2 {
   position: fixed;
   top: 340px;
-  right: 150px;
+  right: 50px;
   padding: 20px;
-  padding-right: 30px;
+  padding-right: 31px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 15px;
@@ -313,7 +313,7 @@ button {
 .exchange-box3 img {
   width: 200px;
   height: 280px;
-  border-radius: 15px; /* 둥근 테두리를 추가합니다 */
+  border-radius: 15px;
 }
 
 .lists {
