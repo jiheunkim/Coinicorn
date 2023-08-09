@@ -11,7 +11,7 @@ const Detail = () => {
   const [news, setNews] = useState({});
 
   useEffect(() => {
-    axios.post(`http://192.168.133.220:8000/blockchain/${id}/?format=json`)
+    axios.post(`http://115.85.181.240:8000/blockchain/${id}`)
     .then(response => {
       setNews(response.data);
     })
