@@ -37,15 +37,7 @@ const Lists = () => {
 
   //데이터 호출
   useEffect(() => {
-    axios({
-      method: 'post',
-      url: 'http://115.85.181.240:8000/blockchain/apitest',
-      headers: {
-        'Origin': 'http://115.85.183.115:3000', // 프론트엔드 도메인
-        'Access-Control-Request-Method': 'POST',
-        'Access-Control-Request-Headers': 'Content-Type',
-      },
-    })
+    axios.post('http://115.85.181.240:8000/blockchain/apitest')
       .then(response => {
         setInfo(response.data);
       })
