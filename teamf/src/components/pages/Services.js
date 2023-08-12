@@ -1,94 +1,53 @@
-import '../../App.css';
+import React from 'react';
 import '../Servicepage.css';
-import React, { useState } from "react";
-import axios from "axios";
-import Footer from '../Footer';
-
+import ServicesItem from './ServicesItem';
+import coinicornlogo from './coinicornlogo.jpg';
 
 function Services() {
-  // const [text, setText] = useState("없음");
-  
-  // const clicked = () => {
-  //   axios
-  //     .get("http://192.168.135.207:8000/", {
-  //       params: {
-  //         abc: "가나다",
-  //       },
-  //     })
-  //     .then((response) => setText(JSON.stringify(response.data)));
-  // };
-
   return (
-    <>
-      <div className="services">
-        <video src="/videos/video-2.mp4" autoPlay loop muted />
-        <div className='service-row1'>
-          <div className="service-card1">
-            
-            <p className='p1'>
-            해외의 가상화폐 이슈 하나하나 찾아보기 힘드셨죠?
-            </p>
-            <p className='pp1'>
-            Coinicorn
-            </p>
-            <p className='ppp1'>
-            이 대신 해드립니다.
-            </p>
-            <p className='pppp1'>
+    <div className='cards'>
+      <h1 style={{ fontSize: '36px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+      Coinicorn을 소개합니다
+      </h1>
+      <div className='services__container'>
+        <div className='services__wrapper'>
+          <ul className='services__items'>
+            <ServicesItem
+              src={coinicornlogo}
+              text='해외의 가상화폐 이슈 하나하나 찾아보기 힘드셨죠?
+              Coinicorn
+              이 대신 해드립니다.
+              달라진 시각, 달라진 접근
+              '
+              />
 
-            달라진 시각, 달라진 접근
-            </p>
-          </div>
-
-          <div className="service-card2">
-            <h2>Service 1</h2>
-            <p className='p2'>
+            <ServicesItem
+              src='https://t1.daumcdn.net/cfile/tistory/253E7E375474C4FB08'
+              text='
               해외 소식도 한국어로
-            </p>
-            <p className='pp2'>
               한 단어 한 단어 번역하면서 읽던 과거 해외 뉴스
-            </p>
-            <p className='ppp2'>
-              이제 한국어로 접하세요.
-            </p>
-          </div>
-        </div>
-
-        <div className='service-row2'>
-          <div className="service-card3">
-            <h2>Service 2</h2>
-            <p className='p3'>
-              시간이 없다면 요약본으로
-            </p>
-            <p className='pp3'>
+              이제 한국어로 접하세요.'
+            />
+          </ul>
+          <ul className='services__items'>
+            <ServicesItem
+              src='https://steemitimages.com/640x0/https://cdn.steemitimages.com/DQmVwrYSAuZvRreRhF3Jp7KS2mpbADe7Dd1girQEWJzJYb5/chat-GPT.png'
+              text='시간이 없다면 요약본으로
               Chat-GPT
-            </p>
-            <p className='ppp3'>
               기술을 활용한
-            </p>
-            <p className='pppp3'>
-              요약본으로 이동시간에도 편하게 확인!
-            </p>
-          </div>
-
-          <div className="service-card4">
-            <h2>Service 3</h2>
-            <p className='p4'>
-              아는만큼 보인다
-            </p>
-            <p className='pp4'>
+              요약본으로 이동시간에도 편하게 확인!'
+            />
+            <ServicesItem
+              src='https://ppss.kr/wp-content/uploads/2018/01/008-7.jpg'
+              text='아는만큼 보인다.
               다양한 정보 습득으로 향상되는
-            </p>
-            <p className='ppp4'>
-              정확도와 수익률을 경험해보세요!
-            </p>
-          </div>
+              정확도와 수익률을 경험해보세요!'
+
+            />
+          </ul>
         </div>
+      </div>
     </div>
-    <br></br><br></br><br></br>
-    <br></br><br></br><br></br>
-    <Footer />
-    </>
   );
 }
 

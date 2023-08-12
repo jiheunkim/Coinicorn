@@ -1,150 +1,120 @@
 .services {
-    height: 100%;
-    width: 100%;
+  padding: 4rem;
+  background: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.services__container {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.services__wrapper {
+  position: relative;
+  margin: 50px 0 45px;
+}
+
+.services__items {
+  margin-bottom: 24px;
+}
+
+.services__item {
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+.services__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 6px 20px rgba(56, 125, 255, 0.17);
+  -webkit-filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  filter: drop-shadow(0 6px 20px rgba(56, 125, 255, 0.017));
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.services__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  overflow: hidden;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.services__item__pic-wrap::after {
+  content: attr(data-category);
+  position: absolute;
+  bottom: 0;
+  margin-left: 10px;
+  padding: 6px 8px;
+  max-width: calc((100%) - 60px);
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #1f98f4;
+  box-sizing: border-box;
+}
+
+.services__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.2s linear;
+}
+
+.services__item__img:hover {
+  transform: scale(1.1);
+}
+
+.services__item__info {
+  padding: 20px 30px 30px;
+}
+
+.services__item__text {
+  color: #252e48;
+  font-size: 18px;
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 24px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .services__items {
     display: flex;
-    object-fit: contain;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    justify-content: center; /* 필요에 따라 레이아웃 조정 */
   }
-  .video {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    z-index: -1;
+}
+
+@media only screen and (max-width: 1024px) {
+  .services__item {
+    margin-bottom: 2rem;
   }
-  
-  
-  
-  
-  .service-card1,.service-card2,.service-card3,.service-card4 {
-    display: flex;
-    flex-direction: column; /* 세로 방향으로 요소들을 배치 */
-    align-items: center; /* 가로 방향에서 중앙 정렬 */
-    background-color: #fffefed5;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    max-width: 600px;
-    max-height: 300px;
-    width: calc(50% - 10px); /* 2개씩 나열이기 때문에 너비 조정 */
-    margin-bottom: 20px; /* 각 카드 사이의 간격을 조정 */
-  }
-  .service-card1{
-    background-color: #1648b2d5;
-  }
-  .service-card2{
-    background-color: white;
-    border: 2px solid black; /* 테두리 두께 2px, 검은색 테두리 */
-  }
-  .service-card3{
-    background-color: white;
-    border: 2px solid black; /* 테두리 두께 2px, 검은색 테두리 */
-  }
-  .service-card4{
-    background-color: black;
-  }
-  
-  .parent-container {
-    margin-bottom: 0px; /* 원하는 크기로 간격을 조정 */
-  }
-  .service-row1 {
-    display: flex;
-    justify-content: center; /* 필요에 따라 레이아웃 조정 */
-    width: 100%;
-    max-width: 1200px; /* 바둑판 모양이기 때문에 최대 너비 설정 */
-    margin: 0 auto; /* 중앙 정렬을 위해 필요한 경우 설정 */
-  }
-  .service-row2 {
-    display: flex;
-    justify-content: center; /* 필요에 따라 레이아웃 조정 */
-    width: 100%;
-    max-width: 1200px; /* 바둑판 모양이기 때문에 최대 너비 설정 */
-    margin: 0 auto; /* 중앙 정렬을 위해 필요한 경우 설정 */
-  }
-  
-  .service-card1,.service-card2,.service-card3,.service-card4{
-    margin: 10px 10px;
-  }
-  .service.title{
-    font-size: 20px;
-  }
-  
-  .p1{
-    font-size: 15px;
-    margin-top: 30px;
-    font-family: 'Nanum Square' sans-serif;
-  }
-  .pp1{
-    font-size: 60px;
-    margin-top: 10px;
-  }
-  .ppp1{
-    font-size: 15px;
-    margin-top: 5px;
-  }
-  .pppp1{
-    font-size: 20px;
-    line-height: 2;
-    margin-top: 20px;
-  }
-  .p2{
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin-top: 10px;
-  }
-  .pp2,.ppp2{
-    font-size: 15px;
-    line-height: 2;
-    margin-top: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .pp3{
-    font-size: 50px;
-    font-weight: bold;
-    letter-spacing: -1px;
-  }
-  .p3,.ppp3,.pppp3{
-    font-size: 15px;
-    line-height: 2;
-    margin-top: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-  .p4{
-    font-size: 45px;
-    font-weight: bold;
-    letter-spacing: -1px;
-    margin-top: 10px;
-  }
-  .pp4,.ppp4,.pppp4{
-    font-size: 15px;
-    line-height: 2;
-    margin-top: 10px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-  
-   h2 {
-    color: #333;
-  }
-  .service-card4 h2{
-    color: rgb(186, 184, 182);
-  }
-  
-  
-  p {
-    color: #010101;
-  }
-  .service-card1 p{
-    color: #fff;
-  }
-  .service-card4 p{
-    color: white;
-  }
+}
