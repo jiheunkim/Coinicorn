@@ -3,6 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import axios from 'axios';
 import ListTr from './ListTr';
 import { Link } from 'react-router-dom';
+import RightBar from './RightBar';
 
 /**
  * @typedef {{
@@ -79,7 +80,8 @@ const Lists = () => {
   
   return (
     <div className="container max-w-screen-lg mx-auto">
-        {/* "거래소 바로가기" 상자 */}
+        {/* "거래소 바로가기" 상자
+        <RightBar top10Numbers={top10Numbers} coins={coins} /> */}
         <div className="exchange-box">
             <p>거래소 바로가기</p>
             <ul>
