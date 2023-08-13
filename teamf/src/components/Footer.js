@@ -1,9 +1,24 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Footer.css';
 import { Button } from './Button';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Footer() {
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = async () => {
+    try {
+      // 이메일을 백엔드로 전송
+      await axios.post('http://115.85.181.240:8000/blockchain/sendnews/이메일주소/', { email });
+      //여기에!!! 백엔드 api 주소 집어넣어야함!!!
+      alert('Successfully subscribed!');
+    } catch (error) {
+      console.error('Error subscribing:', error);
+      alert('Error subscribing. Please try again later.');
+    }
+  };
+
   return (
     <div className='footer-container'>
       <section className='footer-subscription'>
@@ -20,8 +35,12 @@ function Footer() {
               name='email'
               type='email'
               placeholder='Your Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
+            <Button buttonStyle='btn--outline' onClick={handleSubscribe}>
+             Subscribe
+            </Button>
           </form>
         </div>
       </section>
