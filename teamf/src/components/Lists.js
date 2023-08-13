@@ -133,13 +133,18 @@ const Lists = () => {
         </thead>
         {isFirstItemLoaded && ( // 조건부 렌더링
         <tr className='bg-white'>
-          <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{info[0].news_id}</td>
+          {/* <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{info[0].news_id}</td> */}
           <Link key={info[0].news_id} to={`/news/detail/${info[0].news_id}`}>
             <td className='px-4 py-3'>
+              <span className='w-btn w-btn-blue'>{info[0].tickers.replace(/[\[\]']+/g, '')}</span>
+              <span style={{ fontWeight: 300, fontSize: '14px' }}>
+                &nbsp;&nbsp;&nbsp;
+                {formatDate(info[0].create_date)}</span>
+              <br></br>
               <span style={{ fontWeight: 600, fontSize: '24px' }}>{info[0].news_title}</span>
               <br />
               <span style={{ fontWeight: 300, fontSize: '14px' }}>
-                00일보 | {info[0].view} | {info[0].create_date}
+                {info[0].source_name} | 조회수 {info[0].view}
                 <br></br>
                 {summary}
               </span>
@@ -160,45 +165,32 @@ const Lists = () => {
         )}
         </table>
         <table className="min-w-full table-auto text-gray-800">
-        <thead className='justify-between'>
-            <tr className='bg-white px-4 py-3'>
-            {/* 동적으로 토큰 버튼 생성
-            {coins.map((coin, index) => (
-                <th key={index}>
-                    <button
-                        className="w-btn w-btn-blue"
-                        type="button"
-                        style={{
-                            background: coin.quotes.KRW.percent_change_24h >= 0
-                                ? '#F0D4D4'
-                                : 'transparent', // 변경할 배경색
-                        }}
-                    >
-                        {coin.symbol}&nbsp;
-                        {coin.quotes.KRW.percent_change_24h >= 0 ? (
-                        <span style={{ color: '#FF3333' }}>
-                            +{coin.quotes.KRW.percent_change_24h.toFixed(2)}%
-                        </span>
-                        ) : (
-                        <span style={{ color: '#0066FF' }}>
-                            {coin.quotes.KRW.percent_change_24h.toFixed(2)}%
-                        </span>
-                        )}
-                    </button>
-                </th>
-            ))} */}
-            </tr>
-        </thead>
         <ListTr info={info}/>
         </table>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-        <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
     </div>
   );
+}
+
+function formatDate(dateString) {
+  const today = new Date();
+  const targetDate = new Date(dateString);
+  const timeDiff = today - targetDate;
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (timeDiff < oneDay) {
+    return '오늘';
+  } else if (timeDiff < 2 * oneDay) {
+    return '어제';
+  } else if (timeDiff < 7 * oneDay) {
+    const daysAgo = Math.floor(timeDiff / oneDay);
+    return `${daysAgo}일 전`;
+  } else {
+    const month = targetDate.getMonth() + 1;
+    const day = targetDate.getDate();
+    return `${month < 10 ? '0' : ''}${month}.${day < 10 ? '0' : ''}${day}`;
+  }
 }
 
 export default Lists;
