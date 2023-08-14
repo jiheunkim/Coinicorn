@@ -2,6 +2,7 @@ import React from 'react';
 import '../Servicepage.css';
 import ServicesItem from './ServicesItem';
 import coinicornlogo from './coinicornlogo.jpg';
+import coinicornlogoimg2 from './coinicornlogoimg2.png';
 
 function Services() {
   return (
@@ -13,7 +14,7 @@ function Services() {
         <div className='services__wrapper'>
           <ul className='services__items'>
             <ServicesItem
-              src={coinicornlogo}
+              src={coinicornlogoimg2}
               text='해외의 가상화폐 이슈 하나하나 찾아보기 힘드셨죠?
               Coinicorn
               이 대신 해드립니다.
