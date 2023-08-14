@@ -17,13 +17,13 @@ const ListTd = ({ item, isFirst }) => {
         <tr className='bg-white'>
             {/* <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{item.news_id}</td> */}
             <Link key={item.news_id} to={`/news/detail/${item.news_id}`}>
-                <td className='px-4 py-3'>
+                <td className='px-4 py-3 pl-20' style={{ lineHeight: '180%'}}>
                     <span className='w-btn w-btn-blue'>{item.tickers.replace(/[\[\]']+/g, '')}</span>
                     <span style={{ fontWeight: 300, fontSize: '14px' }}>
                         &nbsp;&nbsp;&nbsp;
                         {formatDate(item.create_date)}</span>
                     <br></br>
-                    <span style={{ fontWeight: 600, fontSize: '22px' }}>{item.news_title}</span>
+                    <span style={{ fontWeight: 600, fontSize: '20px' }}>{item.news_title}</span>
                     <br />
                     <span style={{ fontWeight: 300, fontSize: '14px' }}>
                         {item.source_name} | 조회수 {item.view}
@@ -31,10 +31,15 @@ const ListTd = ({ item, isFirst }) => {
                     </span>
                 </td>
             </Link>
-            <td className={`px-4 py-3 ${item.isRightAligned ? 'right-align' : ''}`}>
+            <td className={`py-3 pr-20 ${item.isRightAligned ? 'right-align' : ''}`}>
                 <img
                     alt='News Image'
                     src={item.thumb_url}
+                    style={{
+                        width: '400px',
+                        maxHeight: '300px',
+                        objectFit: 'cover',
+                      }}
                 />
             </td>
         </tr>
