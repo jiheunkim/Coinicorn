@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
+import '../Lists.css';
 import { useParams } from 'react-router-dom';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import RightBar from "../RightBar";
@@ -22,7 +23,7 @@ const Detail = () => {
   }, [id]);
 
 
-  const { news_title, content, summary,thumb_url, view, publisher  } = news;
+  const { news_title, content, summary,thumb_url, view, source_name, create_date, tickers, src } = news;
   const { email, name } = news;
 
   // top10Numbers와 coins 변수를 정의
@@ -30,15 +31,18 @@ const Detail = () => {
   const coins = []; // 필요한 값을 여기에 넣어야 함
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto py-8 pl-11">
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
-          <p className="text-base font-semibold text-indigo-600">{news.create_date}</p>
-          <h1 className="mt-4 text-3xl font-bold text-gray-900">{news_title}</h1>
-          <p className="mt-6 text-gray-600">조회수: {news.view}</p>
-          <p className="text-gray-600">발행한 곳: {news.source_name}</p>
+          <p className="text-base font-semibold text-gray-600 text-left">
+          {/* <span className='w-btn w-btn-blue'>{tickers.replace(/[\[\]']+/g, '')}</span> */}
+          &nbsp;&nbsp;&nbsp;
+          {formatDate(create_date)}</p>
+          <h1 className="mt-4 text-3xl font-bold text-gray-900 text-left">{news_title}</h1>
+          <p className="mt-6 text-gray-600 text-left">{source_name} | 조회수 {view} | <Link to={src}>원문보기</Link></p>
         </div>
-
+        <br></br>
+        <p className="text-lg text-gray-700">{summary}</p>
         <div className="mt-8 text-center">
           <img
             className="w-full max-w-lg mx-auto rounded-xl"
@@ -48,7 +52,6 @@ const Detail = () => {
           
         </div>
         <div className="mt-8">
-          <p className="text-lg text-gray-700">{summary}</p>
           <p className="mt-8 text-lg text-gray-700">{content}</p>
           <ul className="mt-8 space-y-4 text-gray-600">
             {/* ... */}
@@ -64,5 +67,25 @@ const Detail = () => {
     </div>
   );
 };
+
+function formatDate(dateString) {
+  const today = new Date();
+  const targetDate = new Date(dateString);
+  const timeDiff = today - targetDate;
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (timeDiff < oneDay) {
+    return '오늘';
+  } else if (timeDiff < 2 * oneDay) {
+    return '어제';
+  } else if (timeDiff < 7 * oneDay) {
+    const daysAgo = Math.floor(timeDiff / oneDay);
+    return `${daysAgo}일 전`;
+  } else {
+    const month = targetDate.getMonth() + 1;
+    const day = targetDate.getDate();
+    return `${month < 10 ? '0' : ''}${month}.${day < 10 ? '0' : ''}${day}`;
+  }
+}
 
 export default Detail;
