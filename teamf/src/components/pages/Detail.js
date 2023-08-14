@@ -36,7 +36,7 @@ const Detail = () => {
           <p className="text-base font-semibold text-indigo-600">{news.create_date}</p>
           <h1 className="mt-4 text-3xl font-bold text-gray-900">{news_title}</h1>
           <p className="mt-6 text-gray-600">조회수: {news.view}</p>
-          <p className="text-gray-600">발행한 곳: 00일보</p>
+          <p className="text-gray-600">발행한 곳: {news.source_name}</p>
         </div>
 
         <div className="mt-8 text-center">
