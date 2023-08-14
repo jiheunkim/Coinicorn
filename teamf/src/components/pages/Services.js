@@ -1,12 +1,12 @@
 import React from 'react';
 import '../Servicepage.css';
 import ServicesItem from './ServicesItem';
-import coinicornlogo from './coinicornlogo.jpg';
 import coinicornlogoimg2 from './coinicornlogoimg2.png';
+import worldmap from './worldmap.png'
 
 function Services() {
   return (
-    <div className='cards'>
+    <div className='cards pl-60 pr-60'>
       <h1 style={{ fontSize: '34px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif',fontWeight: 'bold' }}>
       Coinicorn을 소개합니다
       </h1>
@@ -23,7 +23,7 @@ function Services() {
               />
 
             <ServicesItem
-              src='https://t1.daumcdn.net/cfile/tistory/253E7E375474C4FB08'
+              src={worldmap}
               text='
               해외 소식도 한국어로
               한 단어 한 단어 번역하면서 읽던 과거 해외 뉴스
