@@ -48,16 +48,16 @@ function Footer() {
         <div className='footer-link-wrapper'>
           <div class='footer-link-items'>
             <h2>About Us</h2>
-            <Link to='/services'>How it works</Link>
-            <Link to='/news'>News</Link>
-            <Link to='/'>Terms of Service</Link>
+            <Link to='../Services'>How it works</Link>
+            <Link to='../News'>News</Link>
+            <Link to='../Ranks'>Top100 Ranking</Link>
           </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
-            <Link to='/'>Instagram</Link>
-            <Link to='/'>Facebook</Link>
-            <Link to='/'>Youtube</Link>
-            <Link to='/'>Twitter</Link>
+            <Link to='https://www.instagram.com/likelion_konkuk.univ/'>Instagram</Link>
+            <Link to='https://www.facebook.com/likelionkonkuk/?locale=ko_KR'>Facebook</Link>
+            <Link to='https://www.youtube.com/@likelion.official'>Youtube</Link>
+            {/* <Link to='/'>Twitter</Link> */}
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@ function Footer() {
           <div class='social-icons'>
             <Link
               class='social-icon-link facebook'
-              to='/'
+              to='https://www.facebook.com/likelionkonkuk/?locale=ko_KR'
               target='_blank'
               aria-label='Facebook'
             >
@@ -80,7 +80,7 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link instagram'
-              to='/'
+              to='https://www.instagram.com/likelion_konkuk.univ/'
               target='_blank'
               aria-label='Instagram'
             >
@@ -88,22 +88,22 @@ function Footer() {
             </Link>
             <Link
               class='social-icon-link youtube'
-              to='/'
+              to='https://www.youtube.com/@likelion.official'
               target='_blank'
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
             </Link>
-            <Link
+            {/* <Link
               class='social-icon-link twitter'
               to='/'
               target='_blank'
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
-            </Link>
+            </Link> */}
             <Link
-              class='social-icon-link twitter'
+              class='social-icon-link linkedin'
               to='/'
               target='_blank'
               aria-label='LinkedIn'
