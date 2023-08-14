@@ -46,9 +46,10 @@ function Coins() {
  }, [])
 
  return (
-	<div className="container max-w-screen-lg mx-auto">
+	<div className="container max-w-screen-lg mx-auto pl-20 pr-20">
 		<br></br>
-		<div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '30px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+		<br></br>
+		<div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '26px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
 		🔥가상화폐 실시간 TOP 100🔥
 		</div>
 		<div className="btn" style={{ textAlign: 'right', fontFamily: 'Noto Sans KR, sans-serif' }}>
