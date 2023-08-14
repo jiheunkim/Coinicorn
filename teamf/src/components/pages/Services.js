@@ -6,7 +6,7 @@ import coinicornlogo from './coinicornlogo.jpg';
 function Services() {
   return (
     <div className='cards'>
-      <h1 style={{ fontSize: '36px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+      <h1 style={{ fontSize: '34px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif',fontWeight: 'bold' }}>
       Coinicorn을 소개합니다
       </h1>
       <div className='services__container'>
