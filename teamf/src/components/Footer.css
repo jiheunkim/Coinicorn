@@ -71,6 +71,8 @@
   
   .footer-link-items h2 {
     margin-bottom: 16px;
+    font-size: 26px;
+    font-weight: bold;
   }
   
   .footer-link-items > h2 {
