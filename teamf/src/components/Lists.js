@@ -135,13 +135,13 @@ const Lists = () => {
         <tr className='bg-white'>
           {/* <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{info[0].news_id}</td> */}
           <Link key={info[0].news_id} to={`/news/detail/${info[0].news_id}`}>
-            <td className='px-4 py-3'>
+            <td className='px-3 py-3 pl-20' style={{ lineHeight: '180%'}}>
               <span className='w-btn w-btn-blue'>{info[0].tickers.replace(/[\[\]']+/g, '')}</span>
               <span style={{ fontWeight: 300, fontSize: '14px' }}>
                 &nbsp;&nbsp;&nbsp;
                 {formatDate(info[0].create_date)}</span>
               <br></br>
-              <span style={{ fontWeight: 600, fontSize: '24px' }}>{info[0].news_title}</span>
+              <span style={{ fontWeight: 600, fontSize: '22px' }}>{info[0].news_title}</span>
               <br />
               <span style={{ fontWeight: 300, fontSize: '14px' }}>
                 {info[0].source_name} | 조회수 {info[0].view}
@@ -150,13 +150,13 @@ const Lists = () => {
               </span>
             </td>
           </Link>
-          <td className={`px-4 py-3 ${info[0].isRightAligned ? 'right-align' : ''}`}>
+          <td className={`py-3 pr-20 ${info[0].isRightAligned ? 'right-align' : ''}`}>
             <img
               alt='News Image'
               src={info[0].thumb_url}
               style={{
-                width: '3600px',
-                maxHeight: '3500px',
+                width: '1000px',
+                maxHeight: '900px',
                 objectFit: 'cover',
               }}
             />

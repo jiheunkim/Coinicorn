@@ -21,7 +21,7 @@ button {
     position: relative;
     border: none;
     display: inline-block;
-    padding: 5px 17px;
+    padding: 2px 17px;
     border-radius: 15px;
     font-family: "paybooc-Light", sans-serif;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
@@ -223,7 +223,7 @@ button {
 .exchange-box {
   position: absolute;
   top: 110px;
-  right: 50px;
+  right: 25px;
   padding: 20px;
   padding-right: 95px;
   background-color: #fff;
@@ -270,7 +270,7 @@ button {
 .exchange-box2 {
   position: absolute;
   top: 340px;
-  right: 50px;
+  right: 25px;
   padding: 20px;
   padding-right: 30px;
   background-color: #fff;
