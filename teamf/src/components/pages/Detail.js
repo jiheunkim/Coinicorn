@@ -3,9 +3,9 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { CloudArrowUpIcon, LockClosedIcon, ServerIcon } from '@heroicons/react/20/solid'
 import RightBar from "../RightBar";
+import { Link } from 'react-router-dom';
 
 const Detail = () => {
-  const [info, setInfo] = useState({});
   const params = useParams();
   const { id } = params;
   const { news_id } = params; // URL 매개변수로부터 news_id 값을 가져옴
@@ -21,7 +21,8 @@ const Detail = () => {
     });
   }, [id]);
 
-  const { news_title, content, summary,thumb_url  } = news;
+
+  const { news_title, content, summary,thumb_url, view, publisher  } = news;
   const { email, name } = news;
 
   // top10Numbers와 coins 변수를 정의
@@ -34,6 +35,8 @@ const Detail = () => {
         <div className="text-center">
           <p className="text-base font-semibold text-indigo-600">{news.create_date}</p>
           <h1 className="mt-4 text-3xl font-bold text-gray-900">{news_title}</h1>
+          <p className="mt-6 text-gray-600">조회수: {news.view}</p>
+          <p className="text-gray-600">발행한 곳: 00일보</p>
         </div>
 
         <div className="mt-8 text-center">
