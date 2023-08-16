@@ -49,14 +49,14 @@ function Coins() {
 	<div className="container max-w-screen-lg mx-auto pl-20 pr-20" style={{ fontFamily: 'Open Sans, sans-serif' }}>
 		<br></br>
 		<br></br>
-		<div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '26px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+		<div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '26px', textAlign: 'center' }}>
 		🔥가상화폐 실시간 TOP 100🔥
 		</div>
-		<div className="btn" style={{ textAlign: 'right', fontFamily: 'Noto Sans KR, sans-serif' }}>
+		<div className="btn" style={{ textAlign: 'right' }}>
 			<button onClick={ refreshPage }>새로고침</button>
 		</div>
 		<br></br>
-		<table className="min-w-full table-auto text-gray-800" style={{ textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
+		<table className="min-w-full table-auto text-gray-800" style={{ fontSize: '14px', textAlign: 'center' }}>
 		<thead className='justify-between'>
 			<tr className='bg-gray-100 border-2 border-gray-200'>
 				<th className="text-black px-4 py-3">순위</th>
@@ -78,26 +78,6 @@ function Coins() {
 		}
 		</table>
   	</div>
-	// <div className="App">
-	// 	<section className="coin-tracker">
-	// 		<div className="title flex-grid flex-grid--center">
-	// 			<h1>암호화폐 실시간 TOP 100</h1>
-	// 			<br></br>
-	// 			<div className="btn">
-	// 				<button onClick={ refreshPage }>새로고침</button>
-	// 			</div>
-	// 		</div>
-	// 		<div className="result">
-	// 		{
-	// 			loading
-	// 			? <span className="loader">Loading...</span> 
-	// 			: (
-	// 				<CoinTable coins={ coins }/>
-	// 			)
-	// 		}
-	// 		</div>
-	// 	</section>
-	// </div>
  );
 }
 
