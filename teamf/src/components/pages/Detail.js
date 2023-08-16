@@ -34,7 +34,7 @@ const Detail = () => {
   const coins = []; // 필요한 값을 여기에 넣어야 함
 
   return (
-    <div className="container mx-auto py-8 pl-11" style={{ fontFamily: 'Open Sans, sans-serif' }}>
+    <div className="container mx-auto py-8 pl-11" style={{ fontFamily: 'Open Sans, sans-serif', lineHeight: '180%', letterSpacing: '-1px'}}>
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <p className="text-base font-semibold text-gray-600 text-left">
