@@ -1,11 +1,13 @@
 import React from 'react';
 import '../Servicepage.css';
 import ServicesItem from './ServicesItem';
+import Footer from '../Footer';
 import coinicornlogoimg2 from './coinicornlogoimg2.png';
 import worldmap from './worldmap.png'
 
 function Services() {
   return (
+    <>
     <div className='cards pl-60 pr-60'>
       <h1 style={{ fontSize: '34px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif',fontWeight: 'bold' }}>
       Coinicorn을 소개합니다
@@ -49,6 +51,9 @@ function Services() {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
+    
   );
 }
 
