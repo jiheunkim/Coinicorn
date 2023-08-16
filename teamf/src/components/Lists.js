@@ -126,7 +126,7 @@ const Lists = () => {
             </p>
         </div> */}
         <br></br>
-        <table className="min-w-full table-auto text-gray-800">
+        <table className="min-w-full table-auto text-gray-800" style={{ fontFamily: 'Open Sans, sans-serif' }}>
         <thead className='justify-between'>
             <tr className='bg-white px-4 py-3'>
             </tr>
@@ -164,7 +164,7 @@ const Lists = () => {
         </tr>
         )}
         </table>
-        <table className="min-w-full table-auto text-gray-800">
+        <table className="min-w-full table-auto text-gray-800" style={{ fontFamily: 'Open Sans, sans-serif' }}>
         <ListTr info={info}/>
         </table>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>

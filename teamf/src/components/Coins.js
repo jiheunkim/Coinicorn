@@ -46,7 +46,7 @@ function Coins() {
  }, [])
 
  return (
-	<div className="container max-w-screen-lg mx-auto pl-20 pr-20">
+	<div className="container max-w-screen-lg mx-auto pl-20 pr-20" style={{ fontFamily: 'Open Sans, sans-serif' }}>
 		<br></br>
 		<br></br>
 		<div className='text-xl font-bold mt-5 mb-3 text-center' style={{ fontSize: '26px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif' }}>
