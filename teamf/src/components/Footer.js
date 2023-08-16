@@ -35,7 +35,7 @@ function Footer() {
               className='footer-input'
               name='email'
               type='email'
-              placeholder='Your Email'
+              placeholder='이메일 입력'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

@@ -126,7 +126,7 @@ const Lists = () => {
             </p>
         </div> */}
         <br></br>
-        <table className="min-w-full table-auto text-gray-800">
+        <table className="min-w-full table-auto text-gray-800" style={{ fontFamily: 'Open Sans, sans-serif' }}>
         <thead className='justify-between'>
             <tr className='bg-white px-4 py-3'>
             </tr>
@@ -135,7 +135,7 @@ const Lists = () => {
         <tr className='bg-white'>
           {/* <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{info[0].news_id}</td> */}
           <Link key={info[0].news_id} to={`/news/detail/${info[0].news_id}`}>
-            <td className='px-3 py-3 pl-20' style={{ lineHeight: '180%'}}>
+            <td className='px-3 py-3 pl-20' style={{ lineHeight: '180%', letterSpacing: '-1px'}}>
               <span className='w-btn w-btn-blue'>{info[0].tickers.replace(/[\[\]']+/g, '')}</span>
               <span style={{ fontWeight: 300, fontSize: '14px' }}>
                 &nbsp;&nbsp;&nbsp;
@@ -164,7 +164,7 @@ const Lists = () => {
         </tr>
         )}
         </table>
-        <table className="min-w-full table-auto text-gray-800">
+        <table className="min-w-full table-auto text-gray-800" style={{ fontFamily: 'Open Sans, sans-serif' }}>
         <ListTr info={info}/>
         </table>
         <br></br><br></br><br></br><br></br><br></br><br></br><br></br>

@@ -24,18 +24,21 @@ const Detail = () => {
 
 
   const { news_title, content, summary,thumb_url, view, source_name, create_date, tickers, src } = news;
-  const { email, name } = news;
+
+  // if (tickers.includes('[')) {
+  //   tickers = tickers.replace(/[\[\]']+/g, '');
+  // }
 
   // top10Numbers와 coins 변수를 정의
   const top10Numbers = Array.from({ length: 10 }, (_, i) => i + 1);
   const coins = []; // 필요한 값을 여기에 넣어야 함
 
   return (
-    <div className="container mx-auto py-8 pl-11">
+    <div className="container mx-auto py-8 pl-11" style={{ fontFamily: 'Open Sans, sans-serif', lineHeight: '180%', letterSpacing: '-1px'}}>
       <div className="mx-auto max-w-4xl">
         <div className="text-center">
           <p className="text-base font-semibold text-gray-600 text-left">
-          {/* <span className='w-btn w-btn-blue'>{tickers.replace(/[\[\]']+/g, '')}</span> */}
+          {/* <span className='w-btn w-btn-blue'>{tickers}</span> */}
           &nbsp;&nbsp;&nbsp;
           {formatDate(create_date)}</p>
           <h1 className="mt-4 text-3xl font-bold text-gray-900 text-left">{news_title}</h1>
@@ -53,14 +56,6 @@ const Detail = () => {
         </div>
         <div className="mt-8">
           <p className="mt-8 text-lg text-gray-700">{content}</p>
-          <ul className="mt-8 space-y-4 text-gray-600">
-            {/* ... */}
-
-              </ul>
-
-          <p className="mt-8 text-lg text-gray-700">Additional Content</p>
-          <h2 className="mt-4 text-2xl font-bold text-gray-900">No server? No problem.</h2>
-          <p className="mt-2 text-gray-700">More Content</p>
         </div>
       </div>
       <RightBar top10Numbers={top10Numbers} coins={coins} /> {/* 변수를 전달 */}

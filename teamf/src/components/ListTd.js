@@ -17,7 +17,7 @@ const ListTd = ({ item, isFirst }) => {
         <tr className='bg-white'>
             {/* <td className='px-4 py-3' style={{ fontWeight: 600, fontSize: '16px' }}>{item.news_id}</td> */}
             <Link key={item.news_id} to={`/news/detail/${item.news_id}`}>
-                <td className='px-4 py-3 pl-20' style={{ lineHeight: '180%'}}>
+                <td className='px-4 py-3 pl-20' style={{ lineHeight: '180%', letterSpacing: '-1px'}}>
                     <span className='w-btn w-btn-blue'>{item.tickers.replace(/[\[\]']+/g, '')}</span>
                     <span style={{ fontWeight: 300, fontSize: '14px' }}>
                         &nbsp;&nbsp;&nbsp;
