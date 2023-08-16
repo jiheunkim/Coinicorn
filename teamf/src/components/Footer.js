@@ -10,8 +10,9 @@ function Footer() {
   const handleSubscribe = async () => {
     try {
       // 이메일을 백엔드로 전송
-      await axios.post(`http://115.85.181.240:8000/blockchain/sendnews/${email}`);
+      //await axios.post(`http://115.85.181.240:8000/blockchain/sendnews/${email}`); -바로 메일 전송
       //여기에!!! 백엔드 api 주소 집어넣어야함!!!
+      await axios.post(`http://115.85.181.240:8000/blockchain/subscribe/${email}`); //구독 시스템
       alert('Successfully subscribed!');
     } catch (error) {
       console.error('Error subscribing:', error);
