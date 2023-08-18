@@ -6,7 +6,6 @@ import Home from './components/pages/Home';
 import News from './components/pages/News';
 import Ranks from './components/pages/Ranks';
 import Services from './components/pages/Services';
-import SignUp from './components/pages/SignUp';
 import Detail from './components/pages/Detail';
 
 function App() {
@@ -18,7 +17,6 @@ function App() {
         <Route path="/ranks" element={<Ranks />} />
         <Route path="/news" element={<News />} />
         <Route path="/services" element={<Services />} />
-        <Route path='/sign-up' element={<SignUp />} />
         <Route exact path="/news/detail/:id" element={<Detail />} />
       </Routes>
     </BrowserRouter>

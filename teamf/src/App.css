@@ -7,8 +7,7 @@
 
 .home,
 .services,
-.products,
-.sign-up {
+.products {
   display: flex;
   height: 90vh;
   align-items: center;
@@ -43,19 +42,6 @@
   align-items: center;
   padding: 20px;
   justify-content: center;
-}
-
-.sign-up {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: black;
-  font-size: 2rem;
-}
-
-.sign-up button {
-  align-self: center;
-  font-size: 2rem;
 }
 
 .footer {
