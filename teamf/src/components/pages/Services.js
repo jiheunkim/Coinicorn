@@ -3,14 +3,13 @@ import '../Servicepage.css';
 import ServicesItem from './ServicesItem';
 import Footer from '../Footer';
 import coinicornlogoimg2 from './coinicornlogoimg2.png';
-import worldmap from './worldmap.png'
 
 function Services() {
   return (
     <>
     <div className='cards pl-60 pr-60'>
       <h1 style={{ fontSize: '34px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif',fontWeight: 'bold' }}>
-      Coinicorn을 소개합니다
+      coinicorn을 소개합니다
       </h1>
       <div className='services__container'>
         <div className='services__wrapper'>
@@ -18,14 +17,13 @@ function Services() {
             <ServicesItem
               src={coinicornlogoimg2}
               text='해외의 가상화폐 이슈 하나하나 찾아보기 힘드셨죠?
-              Coinicorn
-              이 대신 해드립니다.
+              Coinicorn이 대신 해드립니다.
               달라진 시각, 달라진 접근
               '
               />
 
             <ServicesItem
-              src={worldmap}
+              src='https://storage.googleapis.com/pod_public/1300/95882.jpg'
               text='
               해외 소식도 한국어로
               한 단어 한 단어 번역하면서 읽던 과거 해외 뉴스
