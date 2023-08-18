@@ -6,7 +6,12 @@
 
 h1 {
   text-align: center;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+}
+.coinicorn {
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 42px;
+  font-weight: bold;
 }
 
 .services__container {

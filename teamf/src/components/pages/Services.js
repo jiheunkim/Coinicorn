@@ -9,7 +9,7 @@ function Services() {
     <>
     <div className='cards pl-60 pr-60'>
       <h1 style={{ fontSize: '34px', textAlign: 'center', fontFamily: 'Noto Sans KR, sans-serif',fontWeight: 'bold' }}>
-      coinicorn을 소개합니다
+      <span class="coinicorn">coinicorn</span>을 소개합니다
       </h1>
       <div className='services__container'>
         <div className='services__wrapper'>
