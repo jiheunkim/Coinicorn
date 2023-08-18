@@ -5,8 +5,8 @@ function ServicesItem(props) {
   return (
     <>
       <li className='services__item'>
-        <Link className='services__item__link' to={props.path}>
-          <figure className='services__item__pic-wrap' data-category={props.label}>
+        <Link className='services__item__link'to={props.path}>
+          <figure className='services__item__pic-wrap'data-category={props.label}>
             <img
               className='services__item__img'
               alt='Travel Image'
