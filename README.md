@@ -5,7 +5,7 @@
 <br>
 
 ## 🖥️ 프로젝트 소개
-`coinicron`은 `ChatGPT api`를 활용한 해외 가상화폐 뉴스 번역 및 요약 서비스입니다. <br>
+`coinicorn`은 `ChatGPT api`를 활용한 해외 가상화폐 뉴스 번역 및 요약 서비스입니다. <br>
 해외 가상화폐 투자자와 국내 가상화폐 투자자 간의 디지털 격차를 해소하는 것을 목적으로 합니다. <br><br>
 <img src="/kunicorn/kunicorn-0001.jpg" style="width: 100%;">
 <img src="/kunicorn/kunicorn-0002.jpg" style="width: 100%;">
